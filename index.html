@@ -356,6 +356,9 @@
                     <div class="form-field">
                         <label class="form-label" for="name">Имя</label>
                         <input class="form-input" type="text" name="name" id="name" />
+                        <svg class="form-icon">
+                            <use href="./images/icons/sprite.svg#icon-close-modal"></use>
+                        </svg>  
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="tel">Телефон</label>
@@ -365,11 +368,11 @@
                         <label class="form-label" for="mail">Почта</label>
                         <input class="form-input" type="email" name="mail" id="mail"/>
                     </div>
-                    <div class="form-field">
+                    <div class="form-field modal-comment">
                     <label class="form-label" for="comment">Комментарий</label>
                         <textarea
                             name="comment"
-                            rows="10"
+                            rows="6"
                             placeholder="Оставьте комментарий"
                             id="comment"
                         ></textarea>
@@ -378,7 +381,7 @@
                         <input type="checkbox" value="agree" name="agree" id="agree">
                         <label for="agree">Соглашаюсь с рассылкой и принимаю Условия договора</label>
                     </div>
-                    <button type="submit" class="modal-button">Отправить</button>
+                    <button type="submit" class="modal-button button primary">Отправить</button>
                 </form>
             </div>
         </div>
