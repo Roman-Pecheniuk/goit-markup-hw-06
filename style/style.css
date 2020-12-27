@@ -400,56 +400,62 @@ h1{
     outline: none;
 }
 
-/* .form-agree{
+.agree {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-} */
-
-.modal-accept {
-    position: relative;
-    margin-bottom: 30px;
-    padding-left: 37px;
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--main-text-cl);
+    color: var(--text-color);
 }
-
-.checkbox-icon {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid var(--black);
-    border-radius: 2px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-.checkbox-input:checked + .checkbox-icon {
-    border-color: var(--accent-cl);
-    background-color: var(--accent-cl);
-    background-image: url(../images/checkbox.svg);
-    background-size: contain;
-    background-origin: border-box;
+.check {
+    display: flex;
+    align-items: center;
 }
-
-.checkbox-input {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    overflow: hidden;
-  }
-
-.form-agree input[type='checkbox'] {
+.check::before {
+    display: inline-block;
+    content: '';
     width: 16px;
     height: 15px;
-    margin-right: 16px;
-    border-radius: 50%;
+    margin-right: 8px;
+    background-image: url(../images/icons/checkbox0.svg);
+    fill: var(--bgc2-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px; */
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox:checked +.check::before {
+    background-color: var(--link-color);
+    background-image: url(../images/icons/checkbox1.svg);
+    border-radius: 2px;
+}
+
+.agree label {
+    position: relative;
+    display: block;
+}
+
+.agree a {
+    text-decoration-line: underline;
+    position: relative;
+    color: var(--link-color);
+    margin-left: 4px;
 }
 
 .form-modal .modal-button{
