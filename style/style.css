@@ -415,6 +415,7 @@ h1{
     display: flex;
     align-items: center;
 }
+
 .check::before {
     display: inline-block;
     content: '';
@@ -432,7 +433,7 @@ h1{
 .visually-hidden {
     position: absolute;
     width: 1px;
-    height: 1px; */
+    height: 1px;
     margin: -1px;
     border: 0;
     padding: 0;
