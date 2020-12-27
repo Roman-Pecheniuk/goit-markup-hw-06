@@ -364,7 +364,7 @@
                     </svg>
                 </button>
                 <form class="form-modal">
-                    <h3 class="title">Оставьте свои данные, мы вам перезвоним</h3>
+                    <h3 class="title modal-title">Оставьте свои данные, мы вам перезвоним</h3>
                     <div class="form-field">
                         <label class="form-label" for="name">Имя</label>
                         <input class="form-input" type="text" name="name" id="name" />
@@ -391,14 +391,19 @@
                         <textarea class="form-input form-textarea"
                             name="comment"
                             rows="6"
-                            placeholder="Оставьте комментарий"
+                            placeholder="Введите текст"
                             id="comment"
                         ></textarea>
                     </div>
-                    <div class="form-agree">
+                    <!-- <div class="form-agree">
                         <input type="checkbox" value="agree" name="agree" id="agree">
                         <label for="agree">Соглашаюсь с рассылкой и принимаю Условия договора</label>
-                    </div>
+                    </div> -->
+                    <label class="modal-accept">
+                        <input class="checkbox-input" name="checkbox" type="checkbox">
+                        <span class="checkbox-icon"></span>
+                        Соглашаюсь с рассылкой и принимаю <a class="modal-contract" href="">Условия договора</a>
+                    </label>
                     <button type="submit" class="modal-button button primary">Отправить</button>
                 </form>
             </div>
